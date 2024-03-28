@@ -9,3 +9,6 @@ RUN /opt/softwareag/wpm/bin/wpm.sh install -r custom_bitbucket wmio-cicd
 
 RUN /opt/softwareag/wpm/bin/wpm.sh install -r default -j <SAG REPO TOKEN> -wr softwareag WmJDBCAdapter
 WORKDIR /
+ENV SAG_IS_CLOUD_REGISTER_URL https://psdev.int-aws-de.webmethods.io
+ENV SAG_IS_EDGE_CLOUD_ALIAS EdgeRuntime_Hybrid_IPaaS_Product
+ENV SAG_IS_CLOUD_REGISTER_TOKEN <Cloud Token>
