@@ -1,0 +1,1 @@
+docker run --name localdb -p 8080:8080 -p 3306:3306 -v /Users/insrsa/Organize/Cx/Internal/PlatformArchitecture/Playground/Docker/Mounts/MySql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=manage -e MYSQL_DATABASE=InventoryDB -e MYSQL_USER=sag -e MYSQL_PASSWORD=manage  -d mysql:latest

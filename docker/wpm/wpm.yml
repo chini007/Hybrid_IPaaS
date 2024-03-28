@@ -1,0 +1,39 @@
+version: 1
+
+switches:
+  # relative path of the target installation of IS (-d)
+  target_installation: /opt/softwareag/IntegrationServer/
+
+  # scan branches for versions (-sb)
+  scan_branches: true
+
+  # delete contents of SCM on a successful install, or update (-kr)
+  cleanup: true
+
+# source  repos ( -r repeating switch )
+repositories:
+  # define your remote registries here (wpm or git) and reference them using -wr 
+  default:
+    type: wpr
+    location: https://packages.softwareag.com
+    working_dir: /tmp
+    creds:
+      token: <SAG REPO TOKEN>
+  custom:
+    type: git
+    location: https://github.com/chini007/
+    creds:
+      user: chini007
+      password: <GITHUB REPO TOKEN>
+  custom_simon:
+    type: git
+    location: https://github.com/SimonHanischSAG/
+    creds:
+      user: SimonHanischSAG
+      password: <GITHUB REPO TOKEN>
+  custom_bitbucket:
+    type: git
+    location: https://bitbucket.org/mfriedhoff75
+    creds:
+      user: mfriedhoff
+      password: <BITBUCKET REPO TOKEN>

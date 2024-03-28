@@ -1,0 +1,11 @@
+FROM sagcr.azurecr.io/webmethods-edge-runtime:11.0.0.2
+
+COPY --chown=sagadmin:sagadmin ./wpm/ /opt/softwareag/wpm/
+COPY --chown=sagadmin:sagadmin ./wpm/wpm.yml /opt/softwareag/wpm/wpm.yml
+
+USER root
+WORKDIR /opt/softwareag/wpm
+RUN /opt/softwareag/wpm/bin/wpm.sh install -r custom_bitbucket wmio-cicd
+
+RUN /opt/softwareag/wpm/bin/wpm.sh install -r default -j <SAG REPO TOKEN> -wr softwareag WmJDBCAdapter
+WORKDIR /
