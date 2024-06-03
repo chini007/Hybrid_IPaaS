@@ -1,0 +1,3259 @@
+{
+	"info": {
+		"_postman_id": "abca549a-6bda-4a58-91f2-ace7bcbafe13",
+		"name": "HybridIPaaSCollections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5524634"
+	},
+	"item": [
+		{
+			"name": "Workflow",
+			"item": [
+				{
+					"name": "insertProductWF",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Greek Yoghurt\",\n    \"Description\": \"Greek Yoghurt 10% fat\",\n    \"Active\":\"true\",\n    \"Category\":\"Dairy\",\n    \"Price\":\"5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://psdev.int-aws-de.webmethods.io/runflow/run/sync/2IB4R4r5QI",
+							"protocol": "https",
+							"host": [
+								"psdev",
+								"int-aws-de",
+								"webmethods",
+								"io"
+							],
+							"path": [
+								"runflow",
+								"run",
+								"sync",
+								"2IB4R4r5QI"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProductWF",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Greek Yoghurt\",\n    \"Description\": \"Greek Yoghurt 10% fat\",\n    \"Active\":\"true\",\n    \"Category\":\"Dairy\",\n    \"Price\":\"4.00\",\n    \"productName\":\"Greek Yoghurt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://psdev.int-aws-de.webmethods.io/runflow/run/sync/v2/qF8xm0KCY",
+							"protocol": "https",
+							"host": [
+								"psdev",
+								"int-aws-de",
+								"webmethods",
+								"io"
+							],
+							"path": [
+								"runflow",
+								"run",
+								"sync",
+								"v2",
+								"qF8xm0KCY"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProductWF",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Greek Yoghurt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://psdev.int-aws-de.webmethods.io/runflow/run/sync/v2/eKQ6kl0M7",
+							"protocol": "https",
+							"host": [
+								"psdev",
+								"int-aws-de",
+								"webmethods",
+								"io"
+							],
+							"path": [
+								"runflow",
+								"run",
+								"sync",
+								"v2",
+								"eKQ6kl0M7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductWF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{wMIO}}/runflow/run/sync/28k6OvqrOE?name=Greek Yoghurt",
+							"host": [
+								"{{wMIO}}"
+							],
+							"path": [
+								"runflow",
+								"run",
+								"sync",
+								"28k6OvqrOE"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Greek Yoghurt"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStockLevelWF",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productName\":\"Greek Yoghurt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://psdev.int-aws-de.webmethods.io/runflow/run/sync/v2/308EdiDoLY",
+							"protocol": "https",
+							"host": [
+								"psdev",
+								"int-aws-de",
+								"webmethods",
+								"io"
+							],
+							"path": [
+								"runflow",
+								"run",
+								"sync",
+								"v2",
+								"308EdiDoLY"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wMio_Int_API",
+			"item": [
+				{
+					"name": "insertProduct_INT_API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Greek Yoghurt\",\n    \"Description\": \"Greek Yoghurt 10% fat\",\n    \"Active\":\"true\",\n    \"Category\":\"Dairy\",\n    \"Price\":\"5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://psdev.int-aws-de.webmethods.io/integration/restv2/development/fl4f0cd39b158adfd5b9fefe/inventory/product",
+							"protocol": "https",
+							"host": [
+								"psdev",
+								"int-aws-de",
+								"webmethods",
+								"io"
+							],
+							"path": [
+								"integration",
+								"restv2",
+								"development",
+								"fl4f0cd39b158adfd5b9fefe",
+								"inventory",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct_INT_API",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Greek Yoghurt\",\n    \"Description\": \"Greek Yoghurt 10% fat\",\n    \"Active\":\"true\",\n    \"Category\":\"Dairy\",\n    \"Price\":\"5.00\",\n    \"productName\":\"Greek Yoghurt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://psdev.int-aws-de.webmethods.io/integration/restv2/development/fl4f0cd39b158adfd5b9fefe/inventory/product",
+							"protocol": "https",
+							"host": [
+								"psdev",
+								"int-aws-de",
+								"webmethods",
+								"io"
+							],
+							"path": [
+								"integration",
+								"restv2",
+								"development",
+								"fl4f0cd39b158adfd5b9fefe",
+								"inventory",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStock_INT_API",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"adjust\":\"decrease\",\n\"quantity\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://psdev.int-aws-de.webmethods.io/integration/restv2/development/fl4f0cd39b158adfd5b9fefe/inventory/product/:productName/updateStock",
+							"protocol": "https",
+							"host": [
+								"psdev",
+								"int-aws-de",
+								"webmethods",
+								"io"
+							],
+							"path": [
+								"integration",
+								"restv2",
+								"development",
+								"fl4f0cd39b158adfd5b9fefe",
+								"inventory",
+								"product",
+								":productName",
+								"updateStock"
+							],
+							"variable": [
+								{
+									"key": "productName",
+									"value": "Greek Yoghurt"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct_INT_API",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Greek Yoghurt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://psdev.int-aws-de.webmethods.io/integration/restv2/development/fl4f0cd39b158adfd5b9fefe/inventory/product",
+							"protocol": "https",
+							"host": [
+								"psdev",
+								"int-aws-de",
+								"webmethods",
+								"io"
+							],
+							"path": [
+								"integration",
+								"restv2",
+								"development",
+								"fl4f0cd39b158adfd5b9fefe",
+								"inventory",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProduct_INT_API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{wMIO_Int_API}}/restv2/development/fl4f0cd39b158adfd5b9fefe/inventory/product?name=Greek Yoghurt",
+							"host": [
+								"{{wMIO_Int_API}}"
+							],
+							"path": [
+								"restv2",
+								"development",
+								"fl4f0cd39b158adfd5b9fefe",
+								"inventory",
+								"product"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Greek Yoghurt"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStockLevel_INT_API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://psdev.int-aws-de.webmethods.io/integration/restv2/development/fl4f0cd39b158adfd5b9fefe/inventory/product/:productName/stockLevel",
+							"protocol": "https",
+							"host": [
+								"psdev",
+								"int-aws-de",
+								"webmethods",
+								"io"
+							],
+							"path": [
+								"integration",
+								"restv2",
+								"development",
+								"fl4f0cd39b158adfd5b9fefe",
+								"inventory",
+								"product",
+								":productName",
+								"stockLevel"
+							],
+							"variable": [
+								{
+									"key": "productName",
+									"value": "Greek Yoghurt"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "wMio_API_GW",
+			"item": [
+				{
+					"name": "updateProduct_GW_API",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Greek Yoghurt\",\n    \"Description\": \"Greek Yoghurt 10% fat\",\n    \"Active\":\"true\",\n    \"Category\":\"Dairy\",\n    \"Price\":\"5.00\",\n    \"productName\":\"Greek Yoghurt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://psdev.apigw-aw-eu.webmethods.io/gateway/inventory/v1/product",
+							"protocol": "https",
+							"host": [
+								"psdev",
+								"apigw-aw-eu",
+								"webmethods",
+								"io"
+							],
+							"path": [
+								"gateway",
+								"inventory",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStock_GW_API",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"adjust\":\"decrease\",\n    \"quantity\":2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://psdev.apigw-aw-eu.webmethods.io/gateway/inventory/v1/product/:productName/updateStock",
+							"protocol": "https",
+							"host": [
+								"psdev",
+								"apigw-aw-eu",
+								"webmethods",
+								"io"
+							],
+							"path": [
+								"gateway",
+								"inventory",
+								"v1",
+								"product",
+								":productName",
+								"updateStock"
+							],
+							"variable": [
+								{
+									"key": "productName",
+									"value": "Greek Yoghurt"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct_GW_API",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Greek Yoghurt\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://psdev.apigw-aw-eu.webmethods.io/gateway/inventory/v1/product",
+							"protocol": "https",
+							"host": [
+								"psdev",
+								"apigw-aw-eu",
+								"webmethods",
+								"io"
+							],
+							"path": [
+								"gateway",
+								"inventory",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProduct_GW_API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{wMIO_API_GW}}/gateway/inventory/v1/product?name=Greek Yoghurt",
+							"host": [
+								"{{wMIO_API_GW}}"
+							],
+							"path": [
+								"gateway",
+								"inventory",
+								"v1",
+								"product"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Greek Yoghurt"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStockLevel_GW_API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://psdev.apigw-aw-eu.webmethods.io/gateway/inventory/v1/product/:productName/stockLevel",
+							"protocol": "https",
+							"host": [
+								"psdev",
+								"apigw-aw-eu",
+								"webmethods",
+								"io"
+							],
+							"path": [
+								"gateway",
+								"inventory",
+								"v1",
+								"product",
+								":productName",
+								"stockLevel"
+							],
+							"variable": [
+								{
+									"key": "productName",
+									"value": "Greek Yoghurt"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertProduct_GW_API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Name\": \"Greek Yoghurt\",\n    \"Description\": \"Greek Yoghurt 10% Fat\",\n    \"Active\":\"true\",\n    \"Category\":\"Dairy\",\n    \"Price\":\"5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://psdev.apigw-aw-eu.webmethods.io/gateway/inventory/v1/product",
+							"protocol": "https",
+							"host": [
+								"psdev",
+								"apigw-aw-eu",
+								"webmethods",
+								"io"
+							],
+							"path": [
+								"gateway",
+								"inventory",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pattern2_HTTP",
+			"item": [
+				{
+					"name": "IS_API",
+					"item": [
+						{
+							"name": "Local",
+							"item": [
+								{
+									"name": "getProduct_Local",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{local}}/product_rad/product?name=Greek Yoghurt",
+											"host": [
+												"{{local}}"
+											],
+											"path": [
+												"product_rad",
+												"product"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Greek Yoghurt",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/product?name=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"product"
+													],
+													"query": [
+														{
+															"key": "name",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"Products\": {\n    \"ProductId\": \"<string>\",\n    \"Name\": \"<string>\",\n    \"Description\": \"<string>\",\n    \"Price\": \"<string>\",\n    \"Category\": \"<string>\",\n    \"Active\": \"<string>\",\n    \"CreatedAt\": \"<string>\",\n    \"UpdatedAt\": \"<string>\"\n  }\n}"
+										},
+										{
+											"name": "Access Denied",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/product?name=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"product"
+													],
+													"query": [
+														{
+															"key": "name",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "insertProduct_Local",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"Name\": \"Greek Yoghurt\",\n    \"Description\": \"Greek Yoghurt 10% Fat\",\n    \"Active\":\"true\",\n    \"Category\":\"Dairy\",\n    \"Price\":\"5\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}/product_rad/product",
+											"host": [
+												"{{local}}"
+											],
+											"path": [
+												"product_rad",
+												"product"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "updateProduct_Local",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"Name\": \"Greek Yoghurt\",\n    \"Description\": \"Greek Yoghurt 10% fat\",\n    \"Active\":\"true\",\n    \"Category\":\"Dairy\",\n    \"Price\":\"4.00\",\n    \"productName\":\"Greek Yoghurt\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}/product_rad/product",
+											"host": [
+												"{{local}}"
+											],
+											"path": [
+												"product_rad",
+												"product"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "updateStock_Local",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"adjust\":\"increase\",\n    \"quantity\":1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}/product_rad/product/:productName/updateStock",
+											"host": [
+												"{{local}}"
+											],
+											"path": [
+												"product_rad",
+												"product",
+												":productName",
+												"updateStock"
+											],
+											"variable": [
+												{
+													"key": "productName",
+													"value": "Greek Yoghurt"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deleteProduct_Local",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"Name\": \"Greek Yoghurt\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}/product_rad/product",
+											"host": [
+												"{{local}}"
+											],
+											"path": [
+												"product_rad",
+												"product"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getStockLevel_Local",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{local}}/product_rad/product/:productName/stockLevel",
+											"host": [
+												"{{local}}"
+											],
+											"path": [
+												"product_rad",
+												"product",
+												":productName",
+												"stockLevel"
+											],
+											"variable": [
+												{
+													"key": "productName",
+													"value": "Greek Yoghurt"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "AWS_IS_API",
+							"item": [
+								{
+									"name": "getProduct",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{AWS_IS_URL}}/product_rad/product?name=Greek Yoghurt",
+											"host": [
+												"{{AWS_IS_URL}}"
+											],
+											"path": [
+												"product_rad",
+												"product"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Greek Yoghurt",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/product?name=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"product"
+													],
+													"query": [
+														{
+															"key": "name",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"Products\": {\n    \"ProductId\": \"<string>\",\n    \"Name\": \"<string>\",\n    \"Description\": \"<string>\",\n    \"Price\": \"<string>\",\n    \"Category\": \"<string>\",\n    \"Active\": \"<string>\",\n    \"CreatedAt\": \"<string>\",\n    \"UpdatedAt\": \"<string>\"\n  }\n}"
+										},
+										{
+											"name": "Access Denied",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/product?name=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"product"
+													],
+													"query": [
+														{
+															"key": "name",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "insertProduct",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"Name\": \"Greek Yoghurt\",\n    \"Description\": \"Greek Yoghurt 10% Fat\",\n    \"Active\":\"true\",\n    \"Category\":\"Dairy\",\n    \"Price\":\"5\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{AWS_IS_URL}}/product_rad/product",
+											"host": [
+												"{{AWS_IS_URL}}"
+											],
+											"path": [
+												"product_rad",
+												"product"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "updateProduct",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"Name\": \"Greek Yoghurt\",\n    \"Description\": \"Greek Yoghurt 10% fat\",\n    \"Active\":\"true\",\n    \"Category\":\"Dairy\",\n    \"Price\":\"4.00\",\n    \"productName\":\"Greek Yoghurt\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{local}}/product_rad/product",
+											"host": [
+												"{{local}}"
+											],
+											"path": [
+												"product_rad",
+												"product"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "updateStock",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"adjust\":\"increase\",\n    \"quantity\":1\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{AWS_IS_URL}}/product_rad/product/:productName/updateStock",
+											"host": [
+												"{{AWS_IS_URL}}"
+											],
+											"path": [
+												"product_rad",
+												"product",
+												":productName",
+												"updateStock"
+											],
+											"variable": [
+												{
+													"key": "productName",
+													"value": "Greek Yoghurt"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deleteProduct",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"Name\": \"Greek Yoghurt\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{AWS_IS_URL}}/product_rad/product",
+											"host": [
+												"{{AWS_IS_URL}}"
+											],
+											"path": [
+												"product_rad",
+												"product"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getStockLevel",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{AWS_IS_URL}}/product_rad/product/:productName/stockLevel",
+											"host": [
+												"{{AWS_IS_URL}}"
+											],
+											"path": [
+												"product_rad",
+												"product",
+												":productName",
+												"stockLevel"
+											],
+											"variable": [
+												{
+													"key": "productName",
+													"value": "Greek Yoghurt"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"auth": {
+						"type": "basic",
+						"basic": [
+							{
+								"key": "password",
+								"value": "manage",
+								"type": "string"
+							},
+							{
+								"key": "username",
+								"value": "Administrator",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"packages": {},
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
+					"name": "wMio_Int_API",
+					"item": [
+						{
+							"name": "getProduct",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{wMIO_Int_API}}/fl4f0cd39b158adfd5b9fefe/inventory_direct_int/product?name=Greek Yoghurt",
+									"host": [
+										"{{wMIO_Int_API}}"
+									],
+									"path": [
+										"fl4f0cd39b158adfd5b9fefe",
+										"inventory_direct_int",
+										"product"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Greek Yoghurt",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/product?name=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"Products\": {\n    \"ProductId\": \"<string>\",\n    \"Name\": \"<string>\",\n    \"Description\": \"<string>\",\n    \"Price\": \"<string>\",\n    \"Category\": \"<string>\",\n    \"Active\": \"<string>\",\n    \"CreatedAt\": \"<string>\",\n    \"UpdatedAt\": \"<string>\"\n  }\n}"
+								},
+								{
+									"name": "Access Denied",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/product?name=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "insertProduct",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "Greek Yoghurt"
+										},
+										{
+											"key": "Description",
+											"value": "Greek Yoghurt 10% Fat"
+										},
+										{
+											"key": "Active",
+											"value": "true"
+										},
+										{
+											"key": "Category",
+											"value": "Dairy"
+										},
+										{
+											"key": "Price",
+											"value": "4.00"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{wMIO_Int_API}}/fl4f0cd39b158adfd5b9fefe/inventory_direct_int/product",
+									"host": [
+										"{{wMIO_Int_API}}"
+									],
+									"path": [
+										"fl4f0cd39b158adfd5b9fefe",
+										"inventory_direct_int",
+										"product"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "Name",
+													"value": "<string>"
+												},
+												{
+													"key": "Description",
+													"value": "<string>"
+												},
+												{
+													"key": "Active",
+													"value": "<string>"
+												},
+												{
+													"key": "Category",
+													"value": "<string>"
+												},
+												{
+													"key": "Price",
+													"value": "<string>"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"productId\": \"<string>\",\n  \"quantity\": \"<string>\"\n}"
+								},
+								{
+									"name": "Access Denied",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "Name",
+													"value": "<string>"
+												},
+												{
+													"key": "Description",
+													"value": "<string>"
+												},
+												{
+													"key": "Active",
+													"value": "<string>"
+												},
+												{
+													"key": "Category",
+													"value": "<string>"
+												},
+												{
+													"key": "Price",
+													"value": "<string>"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "updateProduct",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "Name",
+											"value": "Greek Yoghurt",
+											"description": "(Required) "
+										},
+										{
+											"key": "productName",
+											"value": "Greek Yoghurt",
+											"description": "(Required) "
+										},
+										{
+											"key": "Active",
+											"value": "true"
+										},
+										{
+											"key": "Category",
+											"value": "Dairy"
+										},
+										{
+											"key": "Price",
+											"value": "5.00"
+										},
+										{
+											"key": "Description",
+											"value": "Greek Yoghurt 10% fat"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{wMIO_Int_API}}/fl4f0cd39b158adfd5b9fefe/inventory_direct_int/product",
+									"host": [
+										"{{wMIO_Int_API}}"
+									],
+									"path": [
+										"fl4f0cd39b158adfd5b9fefe",
+										"inventory_direct_int",
+										"product"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "Name",
+													"value": "<string>",
+													"description": "(Required) "
+												},
+												{
+													"key": "productName",
+													"value": "<string>",
+													"description": "(Required) "
+												},
+												{
+													"key": "Active",
+													"value": "<string>"
+												},
+												{
+													"key": "Category",
+													"value": "<string>"
+												},
+												{
+													"key": "Price",
+													"value": "<string>"
+												},
+												{
+													"key": "Description",
+													"value": "<string>"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Access Denied",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "Name",
+													"value": "<string>",
+													"description": "(Required) "
+												},
+												{
+													"key": "productName",
+													"value": "<string>",
+													"description": "(Required) "
+												},
+												{
+													"key": "Active",
+													"value": "<string>"
+												},
+												{
+													"key": "Category",
+													"value": "<string>"
+												},
+												{
+													"key": "Price",
+													"value": "<string>"
+												},
+												{
+													"key": "Description",
+													"value": "<string>"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/product",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "deleteProduct",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{wMIO_Int_API}}/fl4f0cd39b158adfd5b9fefe/inventory_direct_int/product?Name=Greek Yoghurt",
+									"host": [
+										"{{wMIO_Int_API}}"
+									],
+									"path": [
+										"fl4f0cd39b158adfd5b9fefe",
+										"inventory_direct_int",
+										"product"
+									],
+									"query": [
+										{
+											"key": "Name",
+											"value": "Greek Yoghurt",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/product?Name=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product"
+											],
+											"query": [
+												{
+													"key": "Name",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"Products\": {\n    \"ProductId\": \"<string>\",\n    \"Name\": \"<string>\",\n    \"Description\": \"<string>\",\n    \"Price\": \"<string>\",\n    \"Category\": \"<string>\",\n    \"Active\": \"<string>\",\n    \"CreatedAt\": \"<string>\",\n    \"UpdatedAt\": \"<string>\"\n  }\n}"
+								},
+								{
+									"name": "Access Denied",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/product?Name=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product"
+											],
+											"query": [
+												{
+													"key": "Name",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "updateStock",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "adjust",
+											"value": "increase",
+											"description": "(Required) "
+										},
+										{
+											"key": "quantity",
+											"value": "3",
+											"description": "(Required) "
+										}
+									]
+								},
+								"url": {
+									"raw": "{{wMIO_Int_API}}/fl4f0cd39b158adfd5b9fefe/inventory_direct_int/product/:productName/updateStock",
+									"host": [
+										"{{wMIO_Int_API}}"
+									],
+									"path": [
+										"fl4f0cd39b158adfd5b9fefe",
+										"inventory_direct_int",
+										"product",
+										":productName",
+										"updateStock"
+									],
+									"variable": [
+										{
+											"key": "productName",
+											"value": "Greek Yoghurt",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "adjust",
+													"value": "<string>",
+													"description": "(Required) "
+												},
+												{
+													"key": "quantity",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/product/:productName/updateStock",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												":productName",
+												"updateStock"
+											],
+											"variable": [
+												{
+													"key": "productName"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"quantity\": \"<string>\",\n  \"statusMessage\": \"<string>\"\n}"
+								},
+								{
+									"name": "Access Denied",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "adjust",
+													"value": "<string>",
+													"description": "(Required) "
+												},
+												{
+													"key": "quantity",
+													"value": "<string>",
+													"description": "(Required) "
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/product/:productName/updateStock",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												":productName",
+												"updateStock"
+											],
+											"variable": [
+												{
+													"key": "productName"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "getStockLevel",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{wMIO_Int_API}}/fl4f0cd39b158adfd5b9fefe/inventory_direct_int/product/:productName/stockLevel",
+									"host": [
+										"{{wMIO_Int_API}}"
+									],
+									"path": [
+										"fl4f0cd39b158adfd5b9fefe",
+										"inventory_direct_int",
+										"product",
+										":productName",
+										"stockLevel"
+									],
+									"variable": [
+										{
+											"key": "productName",
+											"value": "Greek Yoghurt",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/product/:productName/stockLevel",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												":productName",
+												"stockLevel"
+											],
+											"variable": [
+												{
+													"key": "productName"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"quantity\": \"<string>\"\n}"
+								},
+								{
+									"name": "Access Denied",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Basic <credentials>",
+												"description": "Added as a part of security scheme: basic"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/product/:productName/stockLevel",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"product",
+												":productName",
+												"stockLevel"
+											],
+											"variable": [
+												{
+													"key": "productName"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "wMio_API_GW",
+					"item": [
+						{
+							"name": "Direct_IS",
+							"item": [
+								{
+									"name": "getProduct_GW_API",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{wMIO_API_GW}}/gateway/inventory_direct/v1/product?name=Greek Yoghurt",
+											"host": [
+												"{{wMIO_API_GW}}"
+											],
+											"path": [
+												"gateway",
+												"inventory_direct",
+												"v1",
+												"product"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Greek Yoghurt"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "updateProduct_GW_API",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"Name\": \"Greek Yoghurt\",\n    \"Description\": \"Greek Yoghurt 10% fat\",\n    \"Active\":\"true\",\n    \"Category\":\"Dairy\",\n    \"Price\":\"5.00\",\n    \"productName\":\"Greek Yoghurt\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{wMIO_API_GW}}/gateway/inventory_direct/v1/product",
+											"host": [
+												"{{wMIO_API_GW}}"
+											],
+											"path": [
+												"gateway",
+												"inventory_direct",
+												"v1",
+												"product"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "updateStock_GW_API",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"adjust\":\"decrease\",\n    \"quantity\":2\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{wMIO_API_GW}}/gateway/inventory_direct/v1/product/:productName/updateStock",
+											"host": [
+												"{{wMIO_API_GW}}"
+											],
+											"path": [
+												"gateway",
+												"inventory_direct",
+												"v1",
+												"product",
+												":productName",
+												"updateStock"
+											],
+											"variable": [
+												{
+													"key": "productName",
+													"value": "Greek Yoghurt"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deleteProduct_GW_API",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"Name\": \"Greek Yoghurt\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{wMIO_API_GW}}/gateway/inventory_direct/v1/product",
+											"host": [
+												"{{wMIO_API_GW}}"
+											],
+											"path": [
+												"gateway",
+												"inventory_direct",
+												"v1",
+												"product"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "getStockLevel_GW_API",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{wMIO_API_GW}}/gateway/inventory_direct/v1/product/:productName/stockLevel",
+											"host": [
+												"{{wMIO_API_GW}}"
+											],
+											"path": [
+												"gateway",
+												"inventory_direct",
+												"v1",
+												"product",
+												":productName",
+												"stockLevel"
+											],
+											"variable": [
+												{
+													"key": "productName",
+													"value": "Greek Yoghurt"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "insertProduct_GW_API",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"Name\": \"Greek Yoghurt\",\n    \"Description\": \"Greek Yoghurt 10% Fat\",\n    \"Active\":\"true\",\n    \"Category\":\"Dairy\",\n    \"Price\":\"5\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{wMIO_API_GW}}/gateway/inventory_direct/v1/product",
+											"host": [
+												"{{wMIO_API_GW}}"
+											],
+											"path": [
+												"gateway",
+												"inventory_direct",
+												"v1",
+												"product"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"auth": {
+								"type": "basic",
+								"basic": [
+									{
+										"key": "password",
+										"value": "manage",
+										"type": "string"
+									},
+									{
+										"key": "username",
+										"value": "Administrator",
+										"type": "string"
+									}
+								]
+							},
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"type": "text/javascript",
+										"packages": {},
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"type": "text/javascript",
+										"packages": {},
+										"exec": [
+											""
+										]
+									}
+								}
+							]
+						},
+						{
+							"name": "wMIO_Int",
+							"item": [
+								{
+									"name": "getProduct",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{wMIO_API_GW}}/gateway/inventory_direct_int/v1/product?name=Greek Yoghurt",
+											"host": [
+												"{{wMIO_API_GW}}"
+											],
+											"path": [
+												"gateway",
+												"inventory_direct_int",
+												"v1",
+												"product"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "Greek Yoghurt"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/product?name=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"product"
+													],
+													"query": [
+														{
+															"key": "name",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"Products\": {\n    \"ProductId\": \"<string>\",\n    \"Name\": \"<string>\",\n    \"Description\": \"<string>\",\n    \"Price\": \"<string>\",\n    \"Category\": \"<string>\",\n    \"Active\": \"<string>\",\n    \"CreatedAt\": \"<string>\",\n    \"UpdatedAt\": \"<string>\"\n  }\n}"
+										},
+										{
+											"name": "Access Denied",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/product?name=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"product"
+													],
+													"query": [
+														{
+															"key": "name",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "getStockLevel",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{wMIO_API_GW}}/gateway/inventory_direct_int/v1/product/:productName/stockLevel",
+											"host": [
+												"{{wMIO_API_GW}}"
+											],
+											"path": [
+												"gateway",
+												"inventory_direct_int",
+												"v1",
+												"product",
+												":productName",
+												"stockLevel"
+											],
+											"variable": [
+												{
+													"key": "productName",
+													"value": "Greek Yoghurt",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/product/:productName/stockLevel",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"product",
+														":productName",
+														"stockLevel"
+													],
+													"variable": [
+														{
+															"key": "productName"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"quantity\": \"<string>\"\n}"
+										},
+										{
+											"name": "Access Denied",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/product/:productName/stockLevel",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"product",
+														":productName",
+														"stockLevel"
+													],
+													"variable": [
+														{
+															"key": "productName"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "insertProduct",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "Name",
+													"value": "Greek Yoghurt"
+												},
+												{
+													"key": "Description",
+													"value": "Greek Yoghurt 10% Fat"
+												},
+												{
+													"key": "Active",
+													"value": "true"
+												},
+												{
+													"key": "Category",
+													"value": "Dairy"
+												},
+												{
+													"key": "Price",
+													"value": "4.00"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{wMIO_API_GW}}/gateway/inventory_direct_int/v1/product/",
+											"host": [
+												"{{wMIO_API_GW}}"
+											],
+											"path": [
+												"gateway",
+												"inventory_direct_int",
+												"v1",
+												"product",
+												""
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/x-www-form-urlencoded"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "Name",
+															"value": "<string>"
+														},
+														{
+															"key": "Description",
+															"value": "<string>"
+														},
+														{
+															"key": "Active",
+															"value": "<string>"
+														},
+														{
+															"key": "Category",
+															"value": "<string>"
+														},
+														{
+															"key": "Price",
+															"value": "<string>"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/product",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"product"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"productId\": \"<string>\",\n  \"quantity\": \"<string>\"\n}"
+										},
+										{
+											"name": "Access Denied",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/x-www-form-urlencoded"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "Name",
+															"value": "<string>"
+														},
+														{
+															"key": "Description",
+															"value": "<string>"
+														},
+														{
+															"key": "Active",
+															"value": "<string>"
+														},
+														{
+															"key": "Category",
+															"value": "<string>"
+														},
+														{
+															"key": "Price",
+															"value": "<string>"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/product",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"product"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "updateProduct",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "Name",
+													"value": "Greek Yoghurt",
+													"description": "(Required) "
+												},
+												{
+													"key": "productName",
+													"value": "Greek Yoghurt",
+													"description": "(Required) "
+												},
+												{
+													"key": "Active",
+													"value": "true"
+												},
+												{
+													"key": "Category",
+													"value": "Dairy"
+												},
+												{
+													"key": "Price",
+													"value": "5.00"
+												},
+												{
+													"key": "Description",
+													"value": "Greek Yoghurt 10% fat"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{wMIO_API_GW}}/gateway/inventory_direct_int/v1/product/",
+											"host": [
+												"{{wMIO_API_GW}}"
+											],
+											"path": [
+												"gateway",
+												"inventory_direct_int",
+												"v1",
+												"product",
+												""
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/x-www-form-urlencoded"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "Name",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "productName",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "Active",
+															"value": "<string>"
+														},
+														{
+															"key": "Category",
+															"value": "<string>"
+														},
+														{
+															"key": "Price",
+															"value": "<string>"
+														},
+														{
+															"key": "Description",
+															"value": "<string>"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/product",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"product"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Access Denied",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/x-www-form-urlencoded"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "Name",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "productName",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "Active",
+															"value": "<string>"
+														},
+														{
+															"key": "Category",
+															"value": "<string>"
+														},
+														{
+															"key": "Price",
+															"value": "<string>"
+														},
+														{
+															"key": "Description",
+															"value": "<string>"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/product",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"product"
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "updateStock",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "adjust",
+													"value": "increase",
+													"description": "(Required) "
+												},
+												{
+													"key": "quantity",
+													"value": "3",
+													"description": "(Required) "
+												}
+											]
+										},
+										"url": {
+											"raw": "{{wMIO_API_GW}}/gateway/inventory_direct_int/v1/product/:productName/updateStock",
+											"host": [
+												"{{wMIO_API_GW}}"
+											],
+											"path": [
+												"gateway",
+												"inventory_direct_int",
+												"v1",
+												"product",
+												":productName",
+												"updateStock"
+											],
+											"variable": [
+												{
+													"key": "productName",
+													"value": "Greek Yoghurt",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/x-www-form-urlencoded"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "adjust",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "quantity",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/product/:productName/updateStock",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"product",
+														":productName",
+														"updateStock"
+													],
+													"variable": [
+														{
+															"key": "productName"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"quantity\": \"<string>\",\n  \"statusMessage\": \"<string>\"\n}"
+										},
+										{
+											"name": "Access Denied",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/x-www-form-urlencoded"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "adjust",
+															"value": "<string>",
+															"description": "(Required) "
+														},
+														{
+															"key": "quantity",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/product/:productName/updateStock",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"product",
+														":productName",
+														"updateStock"
+													],
+													"variable": [
+														{
+															"key": "productName"
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "deleteProduct",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{wMIO_API_GW}}/gateway/inventory_direct_int/v1/product?Name=Greek Yoghurt",
+											"host": [
+												"{{wMIO_API_GW}}"
+											],
+											"path": [
+												"gateway",
+												"inventory_direct_int",
+												"v1",
+												"product"
+											],
+											"query": [
+												{
+													"key": "Name",
+													"value": "Greek Yoghurt",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													},
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/product?Name=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"product"
+													],
+													"query": [
+														{
+															"key": "Name",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"Products\": {\n    \"ProductId\": \"<string>\",\n    \"Name\": \"<string>\",\n    \"Description\": \"<string>\",\n    \"Price\": \"<string>\",\n    \"Category\": \"<string>\",\n    \"Active\": \"<string>\",\n    \"CreatedAt\": \"<string>\",\n    \"UpdatedAt\": \"<string>\"\n  }\n}"
+										},
+										{
+											"name": "Access Denied",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Authorization",
+														"value": "Basic <credentials>",
+														"description": "Added as a part of security scheme: basic"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/product?Name=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"product"
+													],
+													"query": [
+														{
+															"key": "Name",
+															"value": "<string>",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "Unauthorized",
+											"code": 401,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "TINTINManage009&",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "insrsa",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "AWS_IS_URL",
+			"value": "http://3.76.89.114:5555",
+			"type": "string"
+		},
+		{
+			"key": "wMIO",
+			"value": "https://psdev.int-aws-de.webmethods.io",
+			"type": "string"
+		},
+		{
+			"key": "wMIO_Int_API",
+			"value": "https://psdev.int-aws-de.webmethods.io/integration/restv2/development",
+			"type": "string"
+		},
+		{
+			"key": "wMIO_API_GW",
+			"value": "https://psdev.apigw-aw-eu.webmethods.io",
+			"type": "string"
+		},
+		{
+			"key": "local",
+			"value": "http://localhost:5555",
+			"type": "string"
+		}
+	]
+}
