@@ -11,3 +11,6 @@
 [submodule "Hybrid_IO_Sync_IPaaSProject"]
 	path = Hybrid_IO_Sync_IPaaSProject
 	url = https://github.com/wMTiG/Hybrid_IO_Sync_IPaaSProject.git
+[submodule "Hybrid_IO_Sync_IPaas_API"]
+	path = Hybrid_IO_Sync_IPaas_API
+	url = https://github.com/wMTiG/Hybrid_IO_Sync_IPaas_API.git
