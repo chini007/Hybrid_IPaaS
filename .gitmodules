@@ -1,3 +1,7 @@
 [submodule "Hybrid_IPaaS_IOProject"]
 	path = Hybrid_IPaaS_IOProject
 	url = https://github.com/wMtig/Hybrid_IPaaS_IOProject.git
+[submodule "https://github.com/wMTiG/Hybrid_IO_Sync_IPaaS.git"]
+	branch = dev
+[submodule "https://github.com/wMTiG/Hybrid_IO_Sync_IPaasProject.git"]
+	branch = featureA
