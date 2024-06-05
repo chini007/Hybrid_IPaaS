@@ -9,5 +9,5 @@ A retail company's inventory management system, leveraging webMethods iPaas as A
 ![High level flow](https://github.com/bramhanayaghea/webMethodsCAF/blob/develop/scenarios/retail/_images/Hybrid-sync-flow.jpg)
 
 This currently includes
-#[Pattern 1](https://github.com/wMTiG/webmethods-cloud-adoption-framework/blob/develop/architectureModels/SaaSToOnPremiseIaaS/PatternDescription.md): Synchronous Hybrid via default UM
-#[Pattern 2](https://github.com/wMTiG/webmethods-cloud-adoption-framework/blob/develop/architectureModels/SaaSToOnPremiseIaaS/PatternDescriptionWtPrivateLink.md): Synchronous Hybrid via HTTP over Private Link
+1. [Pattern 1](https://github.com/wMTiG/webmethods-cloud-adoption-framework/blob/develop/architectureModels/SaaSToOnPremiseIaaS/PatternDescription.md): Synchronous Hybrid via default UM
+2. [Pattern 2](https://github.com/wMTiG/webmethods-cloud-adoption-framework/blob/develop/architectureModels/SaaSToOnPremiseIaaS/PatternDescriptionWtPrivateLink.md): Synchronous Hybrid via HTTP over Private Link
