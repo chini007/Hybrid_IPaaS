@@ -5,3 +5,9 @@
 	branch = dev
 [submodule "https://github.com/wMTiG/Hybrid_IO_Sync_IPaasProject.git"]
 	branch = featureA
+[submodule "Hybrid_IO_Sync_IPaaS"]
+	path = Hybrid_IO_Sync_IPaaS
+	url = https://github.com/wMTiG/Hybrid_IO_Sync_IPaaS.git
+[submodule "Hybrid_IO_Sync_IPaaSProject"]
+	path = Hybrid_IO_Sync_IPaaSProject
+	url = https://github.com/wMTiG/Hybrid_IO_Sync_IPaaSProject.git
