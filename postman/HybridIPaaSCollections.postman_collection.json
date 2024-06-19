@@ -1140,12 +1140,12 @@
 						"basic": [
 							{
 								"key": "password",
-								"value": "manage",
+								"value": "*****",
 								"type": "string"
 							},
 							{
 								"key": "username",
-								"value": "Administrator",
+								"value": "******",
 								"type": "string"
 							}
 						]
@@ -2270,12 +2270,12 @@
 								"basic": [
 									{
 										"key": "password",
-										"value": "manage",
+										"value": "******",
 										"type": "string"
 									},
 									{
 										"key": "username",
-										"value": "Administrator",
+										"value": "******",
 										"type": "string"
 									}
 								]
@@ -3197,12 +3197,12 @@
 		"basic": [
 			{
 				"key": "password",
-				"value": "TINTINManage009&",
+				"value": "*******",
 				"type": "string"
 			},
 			{
 				"key": "username",
-				"value": "insrsa",
+				"value": "******",
 				"type": "string"
 			}
 		]
